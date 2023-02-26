@@ -41,7 +41,7 @@ public class Main {
                     String basename = mdJson.getString(path);
                     if (!basename.contains("minecraft:block/")) continue;
                     String tx = basename.substring(basename.lastIndexOf('/'));
-                    BufferedImage bi = ImageIO.read(new File("images/" + tx + ".png"));
+                    BufferedImage bi = ImageIO.read(new File("textures/" + tx + ".png"));
                     SimpleJson jumboJson = new SimpleJson(new File("jumbo_textures/" + tx + ".json"));
 
                     for (int i = 0;i < bi.getWidth();i++) {
@@ -102,7 +102,7 @@ public class Main {
                         String basename = mdJson.getString(path);
                         if (!basename.contains("minecraft:block/")) continue;
                         String tx = basename.substring(basename.lastIndexOf('/'));
-                        BufferedImage bi = ImageIO.read(new File("images/" + tx + ".png"));
+                        BufferedImage bi = ImageIO.read(new File("textures/" + tx + ".png"));
                         textures.add(bi);
                     }
                 }
