@@ -1,0 +1,35 @@
+.\models\acacia_leaves.json: minecraft:block/leaves
+.\models\acacia_log.json: minecraft:block/cube_column
+.\models\acacia_log_horizontal.json: minecraft:block/cube_column_horizontal
+.\models\acacia_planks.json: minecraft:block/cube_all
+.\models\barrel.json: minecraft:block/cube_bottom_top
+.\models\bedrock_mirrored.json: minecraft:block/cube_mirrored_all
+.\models\beehive.json: minecraft:block/orientable_with_bottom
+.\models\black_glazed_terracotta.json: minecraft:block/template_glazed_terracotta
+.\models\brown_mushroom_block.json: minecraft:block/template_single_face
+.\models\cartography_table.json: minecraft:block/cube
+.\models\chain_command_block.json: minecraft:block/template_command_block
+.\models\cube_all.json: block/cube
+.\models\cube_mirrored_all.json: block/cube_mirrored
+.\models\jigsaw.json: minecraft:block/cube_directional
+.\models\jukebox.json: minecraft:block/cube_top
+.\models\mushroom_block_inside.json: block/template_single_face
+.\models\observer_on.json: block/observer
+.\models\orientable.json: block/orientable_with_bottom
+.\models\pumpkin.json: block/cube_column
+.\models\seagrass.json: minecraft:block/template_seagrass
+.\models\template_command_block.json: block/cube_directional
+
+all
+end, side
+top, bottom, side
+all
+top, bottom, side, front
+pattern
+texture
+north, south, east, west, up, down
+front, back, side
+top, side
+
+
+all, end, side, top, bottom, front, pattern, texture, north, south, east, west, up, down, back
