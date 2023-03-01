@@ -21,7 +21,6 @@ public class Main {
     ));
 
     public static void main(String[] args) throws IOException {
-        //generateMonoJson();
         SimpleJson json = new SimpleJson(new File("./output.json"));
         Map<String, Object> map = json.toMap();
 
@@ -77,8 +76,8 @@ public class Main {
         }
     }
 
-    static void generateMonoJson() throws IOException {
-        List<String> txTypeList = new ArrayList<>(Arrays.asList(
+    static void generateColorJson() throws IOException {
+        List<String> faceTypeLst = new ArrayList<>(Arrays.asList(
                 "all", "end", "side", "top", "bottom",
                 "front", "pattern", "texture", "north", "south",
                 "east", "west", "up", "down", "back"
@@ -90,55 +89,42 @@ public class Main {
         assert models != null;
         for (File md : models) {
             SimpleJson mdJson = new SimpleJson(md);
-            if (mdJson.containsNode("parent")) {
-                String parent = mdJson.getString("parent");
-                if (!parentList.contains(parent)) continue;
+            SimpleJson faces = new SimpleJson();
 
-                List<BufferedImage> textures = new ArrayList<>();
+            if (!mdJson.containsNode("parent")) continue;
+            String parent = mdJson.getString("parent");
+            if (!parentList.contains(parent)) continue;
 
-                for (String type : txTypeList) {
-                    String path = "textures." + type;
-                    if (mdJson.containsNode(path)) {
-                        String basename = mdJson.getString(path);
-                        if (!basename.contains("minecraft:block/")) continue;
-                        String tx = basename.substring(basename.lastIndexOf('/'));
-                        BufferedImage bi = ImageIO.read(new File("textures/" + tx + ".png"));
-                        textures.add(bi);
-                    }
-                }
+            for (String faceType : faceTypeLst) {
+                String path = "textures." + faceType;
+                if (!mdJson.containsNode(path)) continue;
+                String basename = mdJson.getString(path);
+                if (!basename.contains("minecraft:block/")) continue;
 
-                if (textures.size() == 0) continue;
+                String txName = basename.substring(basename.lastIndexOf('/'));
+                BufferedImage bi = ImageIO.read(new File("textures/" + txName + ".png"));
 
-                int r1 = 0;
-                int g1 = 0;
-                int b1 = 0;
-                for (BufferedImage bi : textures) {
-                    int r2 = 0;
-                    int g2 = 0;
-                    int b2 = 0;
-                    for (int i = 0;i < bi.getWidth();i++) {
-                        for (int j = 0;j < bi.getHeight();j++) {
-                            Color c = new Color(bi.getRGB(i, j));
-                            if (c.getAlpha() != 0) {
-                                r2 += c.getRed();
-                                g2 += c.getGreen();
-                                b2 += c.getBlue();
-                            }
+                int r = 0, g = 0, b = 0;
+                for (int i = 0;i < bi.getWidth();i++) {
+                    for (int j = 0;j < bi.getHeight();j++) {
+                        Color c = new Color(bi.getRGB(i, j));
+                        if (c.getAlpha() != 0) {
+                            r += c.getRed();
+                            g += c.getGreen();
+                            b += c.getBlue();
                         }
                     }
-
-                    int pixel = bi.getWidth() * bi.getHeight();
-                    r1 += (r2 / pixel);
-                    g1 += (g2 / pixel);
-                    b1 += (b2 / pixel);
                 }
 
-                Color mono = new Color(r1 / textures.size(), g1 / textures.size(), b1 / textures.size());
-                String filename = md.getName();
-                String name = filename.substring(0, filename.lastIndexOf('.'));
-                System.out.println(name + ": " + mono.getRGB());
-                json.put(name, mono.getRGB());
+                int pixel = bi.getWidth() * bi.getHeight();
+
+                Color color = new Color(r / pixel, g / pixel, b / pixel);
+                faces.put(faceType, color.getRGB());
             }
+
+            String filename = md.getName();
+            String name = filename.substring(0, filename.lastIndexOf('.'));
+            json.put(name, faces);
         }
 
         json.save();
