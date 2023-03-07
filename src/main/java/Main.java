@@ -11,8 +11,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        // generateColorJson();
-        // analyzeParents();
+        //generateColorJson();
+        //analyzeParents();
     }
 
     static void generateColorJson() throws IOException {
@@ -23,7 +23,8 @@ public class Main {
                 "minecraft:block/cube", "minecraft:block/template_command_block", "block/cube",
                 "block/cube_mirrored", "minecraft:block/cube_directional", "minecraft:block/cube_top",
                 "block/template_single_face", "block/observer", "block/orientable_with_bottom",
-                "block/cube_column", "minecraft:block/template_seagrass", "block/cube_directional"
+                "block/cube_column", "minecraft:block/template_seagrass", "block/cube_directional",
+                "block/block"
         ));
 
         List<String> faceTypeLst = new ArrayList<>(Arrays.asList(
@@ -33,7 +34,7 @@ public class Main {
         ));
 
         File[] models = new File("./models/").listFiles();
-        SimpleJson json = new SimpleJson(new File("./output.json"));
+        SimpleJson json = new SimpleJson(new File("./color.json"));
 
         assert models != null;
         for (File md : models) {
@@ -48,8 +49,7 @@ public class Main {
                 String path = "textures." + faceType;
                 if (!mdJson.containsNode(path)) continue;
                 String basename = mdJson.getString(path);
-                if (!basename.contains("minecraft:block/")) continue;
-
+                if (basename.contains("#")) continue;
                 String txName = basename.substring(basename.lastIndexOf('/'));
                 BufferedImage bi = ImageIO.read(new File("textures/" + txName + ".png"));
 
@@ -71,9 +71,11 @@ public class Main {
                 faces.put(faceType, color.getRGB());
             }
 
-            String filename = md.getName();
-            String name = filename.substring(0, filename.lastIndexOf('.'));
-            json.put(name, faces);
+            if (faces.size() != 0) {
+                String filename = md.getName();
+                String name = filename.substring(0, filename.lastIndexOf('.'));
+                json.put(name, faces);
+            }
         }
 
         json.save();

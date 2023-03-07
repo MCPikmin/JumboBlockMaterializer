@@ -170,6 +170,11 @@
   "bubble_coral_block" : {
     "all" : -5956958
   },
+  "cactus" : {
+    "side" : -11635928,
+    "top" : -12492511,
+    "bottom" : -9600447
+  },
   "cartography_table" : {
     "north" : -12244204,
     "south" : -12045790,
@@ -177,6 +182,9 @@
     "west" : -11387606,
     "up" : -9939133,
     "down" : -12440812
+  },
+  "chain" : {
+    "all" : -16053232
   },
   "chain_command_block" : {
     "side" : -8150637,
@@ -209,6 +217,9 @@
   "chiseled_stone_bricks" : {
     "all" : -8948105
   },
+  "chorus_plant" : {
+    "texture" : -10667683
+  },
   "clay" : {
     "all" : -6248781
   },
@@ -233,6 +244,11 @@
     "side" : -5077655,
     "front" : -4880276,
     "back" : -5405846
+  },
+  "composter" : {
+    "side" : -9419233,
+    "top" : -2966874,
+    "bottom" : -9156832
   },
   "cracked_nether_bricks" : {
     "all" : -14150633
@@ -270,11 +286,6 @@
   "crying_obsidian" : {
     "all" : -14677444
   },
-  "cube_all" : { },
-  "cube_bottom_top" : { },
-  "cube_column" : { },
-  "cube_mirrored_all" : { },
-  "cube_top" : { },
   "cut_red_sandstone" : {
     "end" : -4890337,
     "side" : -4365025
@@ -334,6 +345,9 @@
   "dead_horn_coral_block" : {
     "all" : -8028550
   },
+  "dead_sea_pickle" : {
+    "all" : -9406907
+  },
   "dead_tube_coral_block" : {
     "all" : -8225929
   },
@@ -349,11 +363,32 @@
   "dirt" : {
     "all" : -7970749
   },
+  "dragon_egg" : {
+    "all" : -15988465
+  },
+  "dried_kelp_block" : {
+    "north" : -14274531,
+    "south" : -14274531,
+    "east" : -14274531,
+    "west" : -14274531,
+    "up" : -13485530,
+    "down" : -13485530
+  },
   "emerald_block" : {
     "all" : -13972649
   },
   "emerald_ore" : {
     "all" : -9074564
+  },
+  "enchanting_table" : {
+    "side" : -14343638,
+    "top" : -8369323,
+    "bottom" : -15791592
+  },
+  "end_portal_frame" : {
+    "side" : -8747933,
+    "top" : -10782623,
+    "bottom" : -2367842
   },
   "end_stone" : {
     "all" : -2367842
@@ -371,6 +406,12 @@
     "west" : -4216959,
     "up" : -3820411,
     "down" : -4149383
+  },
+  "four_dead_sea_pickles" : {
+    "all" : -9406907
+  },
+  "four_sea_pickles" : {
+    "all" : -9406907
   },
   "frosted_ice_0" : {
     "all" : -7555588
@@ -402,9 +443,19 @@
   "granite" : {
     "all" : -6985899
   },
+  "grass_block" : {
+    "side" : -8492223,
+    "top" : -7105645,
+    "bottom" : -7970749
+  },
   "grass_block_snow" : {
     "side" : -5663099,
     "top" : -7105645,
+    "bottom" : -7970749
+  },
+  "grass_path" : {
+    "side" : -8035519,
+    "top" : -7046847,
     "bottom" : -7970749
   },
   "gravel" : {
@@ -446,6 +497,9 @@
   "green_wool" : {
     "all" : -11244261
   },
+  "grindstone" : {
+    "side" : -11645362
+  },
   "hay_block" : {
     "end" : -5928180,
     "side" : -5863386
@@ -456,6 +510,11 @@
   },
   "honeycomb_block" : {
     "all" : -1731555
+  },
+  "honey_block" : {
+    "side" : -345031,
+    "up" : -280268,
+    "down" : -945647
   },
   "horn_coral_block" : {
     "all" : -2570430
@@ -504,6 +563,11 @@
   },
   "lapis_ore" : {
     "all" : -10260860
+  },
+  "lectern" : {
+    "top" : -5404333,
+    "bottom" : -6127026,
+    "front" : -8297417
   },
   "light_blue_concrete" : {
     "all" : -14448186
@@ -600,7 +664,9 @@
   "mossy_stone_bricks" : {
     "all" : -9209495
   },
-  "mushroom_block_inside" : { },
+  "mushroom_block_inside" : {
+    "texture" : -3560840
+  },
   "mushroom_stem" : {
     "texture" : -3423047
   },
@@ -651,7 +717,15 @@
     "end" : -9611982,
     "side" : -9611982
   },
-  "observer_on" : { },
+  "observer" : {
+    "side" : -12172220,
+    "top" : -10329502,
+    "bottom" : -12106427,
+    "front" : -10000537
+  },
+  "observer_on" : {
+    "bottom" : -11779004
+  },
   "obsidian" : {
     "all" : -15791592
   },
@@ -673,9 +747,6 @@
   "orange_wool" : {
     "all" : -1018349
   },
-  "orientable" : { },
-  "orientable_vertical" : { },
-  "orientable_with_bottom" : { },
   "packed_ice" : {
     "all" : -7490310
   },
@@ -732,7 +803,10 @@
   "prismarine_bricks" : {
     "all" : -10245218
   },
-  "pumpkin" : { },
+  "pumpkin" : {
+    "end" : -3770856,
+    "side" : -3968488
+  },
   "purple_concrete" : {
     "all" : -10215524
   },
@@ -867,14 +941,30 @@
     "top" : -2107734,
     "bottom" : -2635110
   },
+  "scaffolding_stable" : {
+    "side" : -8491716,
+    "top" : -4812448,
+    "bottom" : -1648467
+  },
+  "scaffolding_unstable" : {
+    "side" : -8491716,
+    "top" : -4812448,
+    "bottom" : -1648467
+  },
   "seagrass" : {
     "texture" : -12623061
   },
   "sea_lantern" : {
     "all" : -5453890
   },
+  "sea_pickle" : {
+    "all" : -9406907
+  },
   "shroomlight" : {
     "all" : -1011130
+  },
+  "slime_block" : {
+    "texture" : -9453477
   },
   "smithing_table" : {
     "north" : -13097690,
@@ -952,6 +1042,11 @@
   },
   "stone" : {
     "all" : -8553091
+  },
+  "stonecutter" : {
+    "side" : -12897749,
+    "top" : -8685969,
+    "bottom" : -9013898
   },
   "stone_bricks" : {
     "all" : -8750726
@@ -1072,10 +1167,20 @@
     "end" : -1922403,
     "side" : -1724248
   },
-  "template_command_block" : { },
-  "template_glazed_terracotta" : { },
+  "template_chorus_flower" : {
+    "bottom" : -10667683
+  },
+  "template_four_turtle_eggs" : {
+    "all" : -3618891
+  },
   "terracotta" : {
     "all" : -6791613
+  },
+  "three_dead_sea_pickles" : {
+    "all" : -9406907
+  },
+  "three_sea_pickles" : {
+    "all" : -9406907
   },
   "tnt" : {
     "side" : -4827052,
@@ -1084,6 +1189,12 @@
   },
   "tube_coral_block" : {
     "all" : -13543474
+  },
+  "two_dead_sea_pickles" : {
+    "all" : -9406907
+  },
+  "two_sea_pickles" : {
+    "all" : -9406907
   },
   "warped_hyphae" : {
     "end" : -12961203,
