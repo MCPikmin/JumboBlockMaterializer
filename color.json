@@ -25,14 +25,14 @@
     "all" : -7829368
   },
   "barrel" : {
-    "side" : -9744078,
     "top" : -7969734,
-    "bottom" : -8824525
+    "bottom" : -8824525,
+    "side" : -9744078
   },
   "barrel_open" : {
-    "side" : -9744078,
     "top" : -10730718,
-    "bottom" : -8824525
+    "bottom" : -8824525,
+    "side" : -9744078
   },
   "basalt" : {
     "end" : -11513514,
@@ -45,27 +45,27 @@
     "all" : -11184811
   },
   "beehive" : {
-    "side" : -6455733,
     "top" : -4943270,
     "bottom" : -4943270,
+    "side" : -6455733,
     "front" : -6324147
   },
   "beehive_honey" : {
-    "side" : -6455733,
     "top" : -4943270,
     "bottom" : -4943270,
+    "side" : -6455733,
     "front" : -5799094
   },
   "bee_nest" : {
-    "side" : -3893683,
     "top" : -3497910,
     "bottom" : -6258857,
+    "side" : -3893683,
     "front" : -4747956
   },
   "bee_nest_honey" : {
-    "side" : -3893683,
     "top" : -3497910,
     "bottom" : -6258857,
+    "side" : -3893683,
     "front" : -4024501
   },
   "birch_leaves" : {
@@ -171,9 +171,9 @@
     "all" : -5956958
   },
   "cactus" : {
-    "side" : -11635928,
+    "bottom" : -9600447,
     "top" : -12492511,
-    "bottom" : -9600447
+    "side" : -11635928
   },
   "cartography_table" : {
     "north" : -12244204,
@@ -187,14 +187,14 @@
     "all" : -16053232
   },
   "chain_command_block" : {
-    "side" : -8150637,
     "front" : -8084074,
-    "back" : -8217199
+    "back" : -8217199,
+    "side" : -8150637
   },
   "chain_command_block_conditional" : {
-    "side" : -8281709,
     "front" : -8084074,
-    "back" : -8217199
+    "back" : -8217199,
+    "side" : -8281709
   },
   "chiseled_nether_bricks" : {
     "all" : -13691108
@@ -236,19 +236,19 @@
     "all" : -8421505
   },
   "command_block" : {
-    "side" : -5143189,
     "front" : -4880276,
-    "back" : -5405846
+    "back" : -5405846,
+    "side" : -5143189
   },
   "command_block_conditional" : {
-    "side" : -5077655,
     "front" : -4880276,
-    "back" : -5405846
+    "back" : -5405846,
+    "side" : -5077655
   },
   "composter" : {
-    "side" : -9419233,
     "top" : -2966874,
-    "bottom" : -9156832
+    "bottom" : -9156832,
+    "side" : -9419233
   },
   "cracked_nether_bricks" : {
     "all" : -14150633
@@ -272,9 +272,9 @@
     "side" : -10741475
   },
   "crimson_nylium" : {
-    "side" : -9758182,
     "top" : -8249569,
-    "bottom" : -10410458
+    "bottom" : -10410458,
+    "side" : -9758182
   },
   "crimson_planks" : {
     "all" : -10145722
@@ -367,12 +367,12 @@
     "all" : -15988465
   },
   "dried_kelp_block" : {
-    "north" : -14274531,
-    "south" : -14274531,
-    "east" : -14274531,
-    "west" : -14274531,
+    "down" : -13485530,
     "up" : -13485530,
-    "down" : -13485530
+    "north" : -14274531,
+    "east" : -14274531,
+    "south" : -14274531,
+    "west" : -14274531
   },
   "emerald_block" : {
     "all" : -13972649
@@ -381,14 +381,14 @@
     "all" : -9074564
   },
   "enchanting_table" : {
-    "side" : -14343638,
+    "bottom" : -15791592,
     "top" : -8369323,
-    "bottom" : -15791592
+    "side" : -14343638
   },
   "end_portal_frame" : {
-    "side" : -8747933,
+    "bottom" : -2367842,
     "top" : -10782623,
-    "bottom" : -2367842
+    "side" : -8747933
   },
   "end_stone" : {
     "all" : -2367842
@@ -444,18 +444,18 @@
     "all" : -6985899
   },
   "grass_block" : {
-    "side" : -8492223,
+    "bottom" : -7970749,
     "top" : -7105645,
-    "bottom" : -7970749
+    "side" : -8492223
   },
   "grass_block_snow" : {
-    "side" : -5663099,
     "top" : -7105645,
-    "bottom" : -7970749
+    "bottom" : -7970749,
+    "side" : -5663099
   },
   "grass_path" : {
-    "side" : -8035519,
     "top" : -7046847,
+    "side" : -8035519,
     "bottom" : -7970749
   },
   "gravel" : {
@@ -512,9 +512,9 @@
     "all" : -1731555
   },
   "honey_block" : {
-    "side" : -345031,
+    "down" : -945647,
     "up" : -280268,
-    "down" : -945647
+    "side" : -345031
   },
   "horn_coral_block" : {
     "all" : -2570430
@@ -537,8 +537,8 @@
     "down" : -12700353
   },
   "jukebox" : {
-    "side" : -10995160,
-    "top" : -10665937
+    "top" : -10665937,
+    "side" : -10995160
   },
   "jungle_leaves" : {
     "all" : -9606301
@@ -565,9 +565,9 @@
     "all" : -10260860
   },
   "lectern" : {
-    "top" : -5404333,
     "bottom" : -6127026,
-    "front" : -8297417
+    "front" : -8297417,
+    "top" : -5404333
   },
   "light_blue_concrete" : {
     "all" : -14448186
@@ -628,9 +628,9 @@
     "side" : -8947845
   },
   "loom" : {
-    "side" : -7248568,
     "top" : -7440549,
     "bottom" : -11781084,
+    "side" : -7248568,
     "front" : -7047598
   },
   "magenta_concrete" : {
@@ -674,9 +674,9 @@
     "all" : -3423047
   },
   "mycelium" : {
-    "side" : -9349305,
     "top" : -9477531,
-    "bottom" : -7970749
+    "bottom" : -7970749,
+    "side" : -9349305
   },
   "netherite_block" : {
     "all" : -12436161
@@ -718,9 +718,9 @@
     "side" : -9611982
   },
   "observer" : {
+    "bottom" : -12106427,
     "side" : -12172220,
     "top" : -10329502,
-    "bottom" : -12106427,
     "front" : -10000537
   },
   "observer_on" : {
@@ -769,14 +769,14 @@
     "all" : -1208916
   },
   "piston_inventory" : {
-    "side" : -9541536,
     "top" : -6652073,
-    "bottom" : -10395552
+    "bottom" : -10395552,
+    "side" : -9541536
   },
   "podzol" : {
-    "side" : -8759495,
     "top" : -10797288,
-    "bottom" : -7970749
+    "bottom" : -7970749,
+    "side" : -8759495
   },
   "polished_andesite" : {
     "all" : -8092027
@@ -885,9 +885,9 @@
     "all" : -4299231
   },
   "red_sandstone" : {
-    "side" : -4562147,
     "top" : -4890337,
-    "bottom" : -4627940
+    "bottom" : -4627940,
+    "side" : -4562147
   },
   "red_stained_glass" : {
     "all" : -6737101
@@ -899,56 +899,56 @@
     "all" : -6281438
   },
   "repeating_command_block" : {
-    "side" : -8360278,
     "front" : -8294480,
-    "back" : -8360538
+    "back" : -8360538,
+    "side" : -8360278
   },
   "repeating_command_block_conditional" : {
-    "side" : -8426069,
     "front" : -8294480,
-    "back" : -8360538
+    "back" : -8360538,
+    "side" : -8426069
   },
   "respawn_anchor_0" : {
-    "side" : -14215362,
     "top" : -14609100,
-    "bottom" : -14677444
+    "bottom" : -14677444,
+    "side" : -14215362
   },
   "respawn_anchor_1" : {
-    "side" : -14017984,
     "top" : -11790442,
-    "bottom" : -14677444
+    "bottom" : -14677444,
+    "side" : -14017984
   },
   "respawn_anchor_2" : {
-    "side" : -13886399,
     "top" : -11790442,
-    "bottom" : -14677444
+    "bottom" : -14677444,
+    "side" : -13886399
   },
   "respawn_anchor_3" : {
-    "side" : -13689278,
     "top" : -11790442,
-    "bottom" : -14677444
+    "bottom" : -14677444,
+    "side" : -13689278
   },
   "respawn_anchor_4" : {
-    "side" : -13557692,
     "top" : -11790442,
-    "bottom" : -14677444
+    "bottom" : -14677444,
+    "side" : -13557692
   },
   "sand" : {
     "all" : -2371677
   },
   "sandstone" : {
-    "side" : -2569317,
     "top" : -2107734,
-    "bottom" : -2635110
+    "bottom" : -2635110,
+    "side" : -2569317
   },
   "scaffolding_stable" : {
-    "side" : -8491716,
     "top" : -4812448,
+    "side" : -8491716,
     "bottom" : -1648467
   },
   "scaffolding_unstable" : {
-    "side" : -8491716,
     "top" : -4812448,
+    "side" : -8491716,
     "bottom" : -1648467
   },
   "seagrass" : {
@@ -975,15 +975,15 @@
     "down" : -12575721
   },
   "smoker" : {
-    "side" : -10069173,
     "top" : -11251120,
     "bottom" : -9737881,
+    "side" : -10069173,
     "front" : -11056327
   },
   "smoker_on" : {
-    "side" : -10069173,
     "top" : -11251120,
     "bottom" : -9737881,
+    "side" : -10069173,
     "front" : -9019070
   },
   "smooth_quartz" : {
@@ -1036,17 +1036,17 @@
     "side" : -12966640
   },
   "sticky_piston_inventory" : {
-    "side" : -9541536,
     "top" : -8743588,
-    "bottom" : -10395552
+    "bottom" : -10395552,
+    "side" : -9541536
   },
   "stone" : {
     "all" : -8553091
   },
   "stonecutter" : {
-    "side" : -12897749,
+    "bottom" : -9013898,
     "top" : -8685969,
-    "bottom" : -9013898
+    "side" : -12897749
   },
   "stone_bricks" : {
     "all" : -8750726
@@ -1183,9 +1183,9 @@
     "all" : -9406907
   },
   "tnt" : {
-    "side" : -4827052,
     "top" : -7455179,
-    "bottom" : -5881291
+    "bottom" : -5881291,
+    "side" : -4827052
   },
   "tube_coral_block" : {
     "all" : -13543474
@@ -1201,9 +1201,9 @@
     "side" : -12961203
   },
   "warped_nylium" : {
-    "side" : -12042949,
     "top" : -13929883,
-    "bottom" : -10410458
+    "bottom" : -10410458,
+    "side" : -12042949
   },
   "warped_planks" : {
     "all" : -13932445

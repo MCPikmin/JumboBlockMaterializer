@@ -1,4 +1,6 @@
 import io.github.smile_ns.simplejson.SimpleJson;
+import jumboblock.CubeBlock;
+import jumboblock.JumboBlockUtils;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -11,6 +13,16 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException {
+        long s = System.currentTimeMillis();
+        for (String key : JumboBlockUtils.colorJson.toMap().keySet()) {
+            new CubeBlock(0, key).output();
+        }
+        //new CubeBlock(0, "crafting_table").output();
+
+        long e = System.currentTimeMillis();
+
+        System.out.println("Total Time: " + (e - s) + "ms");
+
         //generateColorJson();
         //analyzeParents();
     }
@@ -26,13 +38,7 @@ public class Main {
                 "block/cube_column", "minecraft:block/template_seagrass", "block/cube_directional",
                 "block/block"
         ));
-
-        List<String> faceTypeLst = new ArrayList<>(Arrays.asList(
-                "all", "end", "side", "top", "bottom",
-                "front", "pattern", "texture", "north", "south",
-                "east", "west", "up", "down", "back"
-        ));
-
+        
         File[] models = new File("./models/").listFiles();
         SimpleJson json = new SimpleJson(new File("./color.json"));
 
@@ -45,17 +51,18 @@ public class Main {
             String parent = mdJson.getString("parent");
             if (!parentList.contains(parent)) continue;
 
-            for (String faceType : faceTypeLst) {
+            if (!mdJson.containsNode("textures")) continue;
+            for (String faceType : mdJson.getKeySet("textures")) {
+                if (!JumboBlockUtils.faceTypeList.contains(faceType)) continue;
                 String path = "textures." + faceType;
-                if (!mdJson.containsNode(path)) continue;
                 String basename = mdJson.getString(path);
                 if (basename.contains("#")) continue;
                 String txName = basename.substring(basename.lastIndexOf('/'));
                 BufferedImage bi = ImageIO.read(new File("textures/" + txName + ".png"));
 
                 int r = 0, g = 0, b = 0;
-                for (int i = 0;i < bi.getWidth();i++) {
-                    for (int j = 0;j < bi.getHeight();j++) {
+                for (int i = 0;i < 16;i++) {
+                    for (int j = 0;j < 16;j++) {
                         Color c = new Color(bi.getRGB(i, j));
                         if (c.getAlpha() != 0) {
                             r += c.getRed();
