@@ -17,11 +17,12 @@ public class CubeBlock implements JumboBlock {
     }
 
     /*
-    ---N---
-    ---0---
-    -1-2-3-
-    ---4---
-    ---5---
+    -------
+    -----0-
+    ---2-1-
+    -4-3---
+    -5-----
+    -------
      */
     private Map<String, List<Integer>> getRenderedTextures() throws IOException {
         SimpleJson model = new SimpleJson(
@@ -33,14 +34,14 @@ public class CubeBlock implements JumboBlock {
             String tx = basename.substring(basename.lastIndexOf('/'));
             Integer[] clonedFaces =
                     key.equals("all") || key.equals("pattern") || key.equals("texture") ? new Integer[]{0, 1, 2, 3, 4, 5} :
-                    key.equals("side") ? new Integer[]{0, 1, 3, 4} :
-                    key.equals("end") ? new Integer[]{2, 5} :
+                    key.equals("side") ? new Integer[]{0, 2, 3, 5} :
+                    key.equals("end") ? new Integer[]{1, 4} :
                     key.equals("north") ? new Integer[]{0} :
-                    key.equals("east") ? new Integer[]{3} :
-                    key.equals("west") ? new Integer[]{1} :
-                    key.equals("south") ? new Integer[]{4} :
-                    key.equals("up") ? new Integer[]{5} :
-                    key.equals("down") ? new Integer[]{2} :
+                    key.equals("down") ? new Integer[]{1} :
+                    key.equals("west") ? new Integer[]{2} :
+                    key.equals("south") ? new Integer[]{3} :
+                    key.equals("up") ? new Integer[]{4} :
+                    key.equals("east") ? new Integer[]{5} :
                             new Integer[]{};
             
             List<Integer> faceLst = txMap.containsKey(tx) ? txMap.get(tx) : new ArrayList<>();
@@ -64,11 +65,11 @@ public class CubeBlock implements JumboBlock {
             for (Integer v : e.getValue()) {
                 List<String> faceTypes =
                         v == 0 ? new ArrayList<>(Arrays.asList("north", "side")) :
-                        v == 1 ? new ArrayList<>(Arrays.asList("west", "side")) :
-                        v == 2 ? new ArrayList<>(Arrays.asList("down", "bottom", "end")) :
-                        v == 3 ? new ArrayList<>(Arrays.asList("east", "side")) :
-                        v == 4 ? new ArrayList<>(Arrays.asList("south", "side")) :
-                        v == 5 ? new ArrayList<>(Arrays.asList("up", "top", "end")) :
+                        v == 1 ? new ArrayList<>(Arrays.asList("down", "end")) :
+                        v == 2 ? new ArrayList<>(Arrays.asList("west", "side")) :
+                        v == 3 ? new ArrayList<>(Arrays.asList("south", "side")) :
+                        v == 4 ? new ArrayList<>(Arrays.asList("up", "end")) :
+                        v == 5 ? new ArrayList<>(Arrays.asList("east", "side")) :
                         new ArrayList<>();
 
                 faceTypes.add("all");

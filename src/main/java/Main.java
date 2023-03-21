@@ -14,10 +14,12 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         long s = System.currentTimeMillis();
+        /*
         for (String key : JumboBlockUtils.colorJson.toMap().keySet()) {
             new CubeBlock(0, key).output();
         }
-        //new CubeBlock(0, "crafting_table").output();
+         */
+        new CubeBlock(0, "crafting_table").output();
 
         long e = System.currentTimeMillis();
 
